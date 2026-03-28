@@ -11,9 +11,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "TechSelection Store | IT Solutions & Security Systems",
+  title: "SmartSoftHub | IT Solutions & Security Systems",
   description:
-    "TechSelection Store - Leading provider of CCTV installation, networking solutions, computer repair services, and IT infrastructure in India.",
+    "SmartSoftHub - Leading provider of CCTV installation, networking solutions, computer repair services, and IT infrastructure in India.",
 };
 
 export default function RootLayout({

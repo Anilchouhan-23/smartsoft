@@ -40,7 +40,7 @@ export default function CCTVInstallationPage() {
                 Professional CCTV Surveillance Solutions
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                TechSelection Store specializes in designing, installing, and
+                SmartSoftHub specializes in designing, installing, and
                 maintaining state-of-the-art CCTV surveillance systems. We work
                 with top brands like <strong>Hikvision</strong>,{" "}
                 <strong>CP Plus</strong>, and <strong>HoneyWell</strong> to

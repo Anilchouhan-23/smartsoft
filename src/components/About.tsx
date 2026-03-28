@@ -31,7 +31,7 @@ export default function About() {
           <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
             <Image
               src="/images/slides/slide1.jpg"
-              alt="TechSelection Store - IT Solutions"
+              alt="SmartSoftHub - IT Solutions"
               fill
               className="object-cover"
             />
@@ -49,7 +49,7 @@ export default function About() {
             Fastest repair service with best price!
           </p>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            We at TechSelection Store are a group of dedicated engineers with more
+            We at SmartSoftHub are a group of dedicated engineers with more
             than a decade of experience in project designing, planning,
             execution, and maintenance. Specializing in CCTV installation,
             networking, and IT infrastructure, we have worked on a wide range of

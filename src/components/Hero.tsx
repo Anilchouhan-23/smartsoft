@@ -16,7 +16,7 @@ export default function Hero() {
             Business
           </h1>
           <p className="text-lg text-blue-200/80 mb-8 leading-relaxed">
-            TechSelection Store is your trusted partner for CCTV installation,
+            SmartSoftHub is your trusted partner for CCTV installation,
             networking solutions, computer repair, and comprehensive IT
             services. We deliver reliable, secure, and cost-effective technology
             solutions.

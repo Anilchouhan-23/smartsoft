@@ -29,7 +29,7 @@ const slides = [
     image: "/images/slides/slide4.jpg",
     title: "Complete IT Infrastructure",
     subtitle: "One Stop IT Solutions Provider",
-    desc: "EPABX, attendance machines, bulk SMS, web services & more. TechSelection Store is your trusted technology partner.",
+    desc: "EPABX, attendance machines, bulk SMS, web services & more. SmartSoftHub is your trusted technology partner.",
     btn: { text: "All Services", href: "/services" },
   },
 ];

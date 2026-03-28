@@ -4,8 +4,8 @@
   --color-navy: #111827;
   --color-navy-light: #1e293b;
   --color-navy-dark: #030712;
-  --color-cyan: #8b5cf6;
-  --color-cyan-dark: #7c3aed;
+  --color-cyan: #2563eb;
+  --color-cyan-dark: #1d4ed8;
 }
 
 html {
@@ -73,7 +73,7 @@ body {
 
 /* Selection color */
 ::selection {
-  background: rgba(139, 92, 246, 0.2);
+  background: rgba(37, 99, 235, 0.2);
   color: #111827;
 }
 
@@ -89,5 +89,5 @@ body {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8b5cf6;
+  background: #2563eb;
 }

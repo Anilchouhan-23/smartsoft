@@ -109,7 +109,7 @@ export default function ComputerRepairPage() {
               Expert Computer Repair &amp; Maintenance
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              TechSelection Store offers fast, reliable, and affordable computer repair services for desktops, laptops, and servers. Our experienced technicians can diagnose and fix any hardware or software issue efficiently.
+              SmartSoftHub offers fast, reliable, and affordable computer repair services for desktops, laptops, and servers. Our experienced technicians can diagnose and fix any hardware or software issue efficiently.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
               We service all major brands including <strong>Dell</strong>, <strong>HP</strong>, <strong>Lenovo</strong>, <strong>Acer</strong>, and more. With quick turnaround times and competitive pricing, we ensure minimum downtime for your business.
@@ -217,7 +217,7 @@ export default function ComputerRepairPage() {
       <section className="py-16">
         <div className="w-[90%] max-w-[1200px] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy mb-3">Why Choose TechSelection?</h2>
+            <h2 className="text-3xl font-bold text-navy mb-3">Why Choose SmartSoftHub?</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">We combine expertise, speed, and affordability to deliver the best repair experience.</p>
             <div className="w-15 h-[3px] bg-cyan mx-auto mt-4 rounded" />
           </div>
