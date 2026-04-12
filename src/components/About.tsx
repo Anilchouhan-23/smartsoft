@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useScrollReveal, useCountUp } from "./useScrollReveal";
 
 function Counter({ end, suffix, label }: { end: number; suffix: string; label: string }) {
@@ -29,11 +28,10 @@ export default function About() {
       >
         <div className="flex-1 min-w-[280px]">
           <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
-            <Image
-              src="/images/slides/slide1.jpg"
-              alt="SmartSoftHub - IT Solutions"
-              fill
-              className="object-cover"
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+              alt="SmartSoftHub software development team collaborating in a modern office"
+              className="w-full h-full object-cover"
             />
             <div className="absolute bottom-4 left-4 bg-cyan text-navy font-bold px-4 py-2 rounded-lg text-sm shadow-lg">
               <i className="fas fa-award mr-2" />

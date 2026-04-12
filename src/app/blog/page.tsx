@@ -1,64 +1,17 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import PageBanner from "@/components/PageBanner";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import blogPosts from "@/data/blogPosts";
 
-const posts = [
-  {
-    id: 1,
-    title: "Scaling Your Startup with Custom SaaS Solutions",
-    excerpt:
-      "Looking for scalable software? SmartSoftHub provides custom SaaS development, cloud deployment, and API integrations for modern businesses.",
-    date: "24 Mar 2026",
-    category: "Software",
-    icon: "fa-cloud",
-  },
-  {
-    id: 2,
-    title: "Web App Security: Best Practices",
-    excerpt:
-      "Protect your user data with professional security implementation. We follow secure coding standards and modern authentication protocols.",
-    date: "24 Mar 2026",
-    category: "Security",
-    icon: "fa-shield-halved",
-  },
-  {
-    id: 3,
-    title: "How to Choose the Right Digital Marketing Strategy",
-    excerpt:
-      "A complete guide to selecting the best social media and SEO strategies for your business. Compare organic growth vs paid advertising.",
-    date: "16 Sep 2025",
-    category: "Marketing",
-    icon: "fa-bullhorn",
-  },
-  {
-    id: 4,
-    title: "Why Your Business Needs a Custom Web App",
-    excerpt:
-      "How to leverage custom software to automate workflows. Tips on selecting the right tech stack for web applications.",
-    date: "12 Sep 2025",
-    category: "Development",
-    icon: "fa-code",
-  },
-  {
-    id: 5,
-    title: "Benefits of Cloud Infrastructure",
-    excerpt:
-      "Why your operations need scalable cloud architecture. Explore AWS, Google Cloud, and Azure benefits for enterprise tools.",
-    date: "05 Aug 2025",
-    category: "Cloud",
-    icon: "fa-server",
-  },
-  {
-    id: 6,
-    title: "Email Marketing vs Social Media: Which is Better?",
-    excerpt:
-      "Compare different marketing channels. Understand ROI, campaign costs, and engagement metrics to make the right choice for your business.",
-    date: "20 Jul 2025",
-    category: "Marketing",
-    icon: "fa-chart-line",
-  },
-];
+export const metadata: Metadata = {
+  title: "Blog | SmartSoftHub - Software, Marketing & Cloud Insights",
+  description:
+    "Read the latest articles on SaaS development, digital marketing, web security, cloud infrastructure, and custom software solutions from SmartSoftHub.",
+  keywords:
+    "software blog, SaaS insights, digital marketing tips, cloud computing, web development, SmartSoftHub blog",
+};
 
 const tags = [
   "SaaS",
@@ -73,7 +26,7 @@ const tags = [
   "Custom Software",
 ];
 
-const recentPosts = posts.slice(0, 5);
+const recentPosts = blogPosts.slice(0, 5);
 
 export default function BlogPage() {
   return (
@@ -86,52 +39,45 @@ export default function BlogPage() {
           {/* Main Content */}
           <div className="flex-[2]">
             <div className="space-y-8">
-              {posts.map((post) => (
+              {blogPosts.map((post) => (
                 <article
                   key={post.id}
-                  className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_35px_rgba(0,0,0,0.1)] transition-all"
+                  className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_35px_rgba(0,0,0,0.1)] transition-all group"
                 >
-                  {/* Image placeholder */}
-                  <div className="bg-gradient-to-br from-navy-light to-navy-dark h-[250px] flex items-center justify-center relative">
-                    <i
-                      className={`fas ${post.icon} text-7xl text-white/15`}
-                    />
-                    <span className="absolute bottom-4 left-4 bg-cyan text-navy text-xs font-bold px-3 py-1.5 rounded">
-                      {post.date}
-                    </span>
-                    <span className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
-                      {post.category}
-                    </span>
-                  </div>
+                  {/* Featured Image */}
+                  <Link href={`/blog/${post.slug}`} className="block">
+                    <div className="relative h-[250px] overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.imageAlt}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <span className="absolute bottom-4 left-4 bg-cyan text-navy text-xs font-bold px-3 py-1.5 rounded">
+                        {post.date}
+                      </span>
+                      <span className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-navy text-xs font-medium px-3 py-1.5 rounded-full">
+                        {post.category}
+                      </span>
+                    </div>
+                  </Link>
                   <div className="p-6">
-                    <h2 className="text-xl font-bold text-navy mb-3 hover:text-cyan transition-colors cursor-pointer">
-                      {post.title}
-                    </h2>
+                    <Link href={`/blog/${post.slug}`}>
+                      <h2 className="text-xl font-bold text-navy mb-3 hover:text-cyan transition-colors">
+                        {post.title}
+                      </h2>
+                    </Link>
                     <p className="text-gray-500 text-sm leading-relaxed mb-4">
                       {post.excerpt}
                     </p>
-                    <span className="inline-flex items-center gap-2 text-cyan font-medium text-sm cursor-pointer hover:gap-3 transition-all">
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="inline-flex items-center gap-2 text-cyan font-medium text-sm hover:gap-3 transition-all"
+                    >
                       Read More <i className="fas fa-arrow-right text-xs" />
-                    </span>
+                    </Link>
                   </div>
                 </article>
               ))}
-            </div>
-
-            {/* Pagination */}
-            <div className="flex justify-center gap-2 mt-12">
-              <span className="w-10 h-10 bg-cyan text-navy font-bold rounded-lg flex items-center justify-center">
-                1
-              </span>
-              <span className="w-10 h-10 bg-white text-gray-600 font-medium rounded-lg flex items-center justify-center shadow hover:bg-cyan hover:text-navy transition-colors cursor-pointer">
-                2
-              </span>
-              <span className="w-10 h-10 bg-white text-gray-600 font-medium rounded-lg flex items-center justify-center shadow hover:bg-cyan hover:text-navy transition-colors cursor-pointer">
-                3
-              </span>
-              <span className="w-10 h-10 bg-white text-gray-600 font-medium rounded-lg flex items-center justify-center shadow hover:bg-cyan hover:text-navy transition-colors cursor-pointer">
-                <i className="fas fa-chevron-right text-sm" />
-              </span>
             </div>
           </div>
 
@@ -144,13 +90,16 @@ export default function BlogPage() {
               </h3>
               <div className="space-y-4">
                 {recentPosts.map((post) => (
-                  <div
+                  <Link
                     key={post.id}
-                    className="flex gap-3 cursor-pointer group"
+                    href={`/blog/${post.slug}`}
+                    className="flex gap-3 group"
                   >
-                    <div className="w-[60px] h-[60px] bg-gradient-to-br from-navy-light to-navy rounded-lg flex items-center justify-center shrink-0">
-                      <i
-                        className={`fas ${post.icon} text-white/30 text-lg`}
+                    <div className="w-[60px] h-[60px] rounded-lg overflow-hidden shrink-0">
+                      <img
+                        src={post.image}
+                        alt={post.imageAlt}
+                        className="w-full h-full object-cover"
                       />
                     </div>
                     <div>
@@ -161,7 +110,7 @@ export default function BlogPage() {
                         {post.date}
                       </span>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="zohoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E42527;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F0A202;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0B9E43;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <text x="100" y="52" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" fill="#E42527" text-anchor="middle" letter-spacing="-1">
+    <tspan fill="#E42527">Z</tspan><tspan fill="#F0A202">o</tspan><tspan fill="#2B9E36">h</tspan><tspan fill="#0089CF">o</tspan>
+  </text>
+</svg>

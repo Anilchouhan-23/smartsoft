@@ -13,26 +13,33 @@ const additionalLinks = [
   { label: "Services", href: "/services" },
   { label: "Products", href: "/products" },
   { label: "Contact Us", href: "/contact" },
-  { label: "Terms & Condition", href: "/terms-and-conditions" },
-  { label: "Returns & Refund Policy", href: "/returns-and-refund" },
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Shipping Policy", href: "/shipping-policy" },
+  { label: "Blog", href: "/blog" },
   { label: "Site Map", href: "/sitemap" },
+];
+
+const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+  { label: "Refund & Returns Policy", href: "/returns-and-refund" },
+  { label: "Shipping Policy", href: "/shipping-policy" },
+  { label: "Affiliate Disclaimer", href: "/affiliate-disclaimer" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-navy text-gray-400 pt-16 pb-5">
       <div className="w-[90%] max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
           {/* About */}
-          <div>
+          <div className="lg:col-span-2">
             <h4 className="text-white text-lg font-semibold mb-5 pb-2.5 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-cyan">
               SmartSoftHub
             </h4>
             <p className="text-sm leading-relaxed mb-2">
-              We Partner with <strong className="text-gray-300">AWS, Google Cloud, Microsoft Azure,
-              Vercel, Stripe, HubSpot</strong>
+              We Partner with{" "}
+              <strong className="text-gray-300">
+                AWS, Google Cloud, Microsoft Azure, Vercel, Stripe, HubSpot
+              </strong>
             </p>
             <p className="text-sm leading-relaxed mb-3">
               Your trusted partner for software development, SaaS solutions,
@@ -54,10 +61,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Additional Links */}
+          {/* Quick Links */}
           <div>
             <h4 className="text-white text-lg font-semibold mb-5 pb-2.5 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-cyan">
-              Additional Links
+              Quick Links
             </h4>
             <ul className="space-y-2.5">
               {additionalLinks.map((l) => (
@@ -74,20 +81,20 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Legal */}
           <div>
             <h4 className="text-white text-lg font-semibold mb-5 pb-2.5 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-cyan">
-              Services
+              Legal
             </h4>
             <ul className="space-y-2.5">
-              {serviceLinks.map((s) => (
-                <li key={s.label}>
+              {legalLinks.map((l) => (
+                <li key={l.label}>
                   <Link
-                    href={s.href}
+                    href={l.href}
                     className="text-sm text-gray-500 hover:text-cyan transition-colors"
                   >
                     <i className="fas fa-chevron-right text-cyan text-xs mr-2" />
-                    {s.label}
+                    {l.label}
                   </Link>
                 </li>
               ))}
@@ -124,12 +131,22 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm">
           <span>&copy; 2026 SmartSoftHub. All Rights Reserved.</span>
           <span className="flex gap-2 flex-wrap justify-center">
-            <Link href="/terms-and-conditions" className="text-cyan hover:underline">
+            <Link
+              href="/terms-and-conditions"
+              className="text-cyan hover:underline"
+            >
               Terms &amp; Conditions
             </Link>
             <span>&bull;</span>
             <Link href="/privacy-policy" className="text-cyan hover:underline">
               Privacy Policy
+            </Link>
+            <span>&bull;</span>
+            <Link
+              href="/affiliate-disclaimer"
+              className="text-cyan hover:underline"
+            >
+              Affiliate Disclaimer
             </Link>
             <span>&bull;</span>
             <Link href="/sitemap" className="text-cyan hover:underline">
